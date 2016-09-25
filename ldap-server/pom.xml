@@ -6,7 +6,6 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.ldaptools.server</groupId>
 	<artifactId>ldap-server</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	
 	<parent>
 		<groupId>com.ldaptools</groupId>

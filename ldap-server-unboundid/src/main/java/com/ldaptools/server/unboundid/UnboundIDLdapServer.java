@@ -15,6 +15,7 @@ import com.unboundid.ldap.listener.InMemoryDirectoryServerConfig;
 import com.unboundid.ldap.listener.InMemoryListenerConfig;
 import com.unboundid.ldap.sdk.Entry;
 import com.unboundid.ldap.sdk.LDAPException;
+import com.unboundid.ldap.sdk.schema.Schema;
 import com.unboundid.ldif.LDIFException;
 import com.unboundid.ldif.LDIFReader;
 
@@ -73,14 +74,14 @@ public class UnboundIDLdapServer implements EmbeddedLdapServer {
 			directoryServerConfig.setGenerateOperationalAttributes(true);
 			
 			// TODO: Use a schema
-//			if (ldapServerConfig.isEnforceSchema()) {
-//				logger.debug("Constructing the schema");
-//				
-//				Schema adSchema = getSchemaFromInputStream("ldif/schema.ldif");
-//				directoryServerConfig.setSchema(adSchema);
-//			} else {
+			if (ldapServerConfig.isEnforceSchema()) {
+				logger.debug("Constructing the schema");
+				
+				Schema adSchema = getSchemaFromInputStream("ldif/schema.ldif");
+				directoryServerConfig.setSchema(adSchema);
+			} else {
 				directoryServerConfig.setSchema(null);
-//			}
+			}
 			
 			InMemoryListenerConfig listenerConfig = InMemoryListenerConfig.createLDAPConfig(ldapServerConfig.getHost(), ldapServerConfig.getPort());
 			directoryServerConfig.setListenerConfigs(listenerConfig);
@@ -109,7 +110,7 @@ public class UnboundIDLdapServer implements EmbeddedLdapServer {
 	 * resources allocated and would potentially require a kill -9 to terminate the process.
 	 */
 	@Override
-	public void stopServer() throws Exception {
+	public void stopServer() {
 		logger.warn("Shutting down in-memory LDAP server");
 		
 		try {
@@ -171,6 +172,17 @@ public class UnboundIDLdapServer implements EmbeddedLdapServer {
 		}
 	
 		ds.add(entry);
+	}
+	
+	private Schema getSchemaFromInputStream(String schemaResource) throws LDIFException, IOException {
+		InputStream stream = getClass().getClassLoader().getResourceAsStream(schemaResource);
+		LDIFReader reader = new LDIFReader(stream);
+		
+		try {
+			return new Schema(reader.readEntry());
+		} finally {
+			closeResources(reader, stream);
+		}
 	}
 	
 	private void closeResources(LDIFReader reader, InputStream stream) {

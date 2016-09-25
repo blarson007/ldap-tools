@@ -32,6 +32,7 @@ import org.apache.directory.server.protocol.shared.transport.TcpTransport;
 import com.ldaptools.server.EmbeddedLdapServer;
 
 public class ApacheLdapServer implements EmbeddedLdapServer {
+	
 	private static final String SYSTEM_PARTITION_ID = "system";
 
 	private DirectoryService directoryService;
@@ -56,9 +57,13 @@ public class ApacheLdapServer implements EmbeddedLdapServer {
     }
 	
 	@Override
-	public void stopServer() throws Exception {
+	public void stopServer() {
 		server.stop();
-		directoryService.shutdown();
+		try {
+			directoryService.shutdown();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	@Override

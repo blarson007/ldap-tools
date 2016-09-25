@@ -1,0 +1,18 @@
+dn: CN=Users,DC=ad,DC=example,DC=com
+objectClass: top
+objectClass: container
+cn: Users
+instanceType: 4
+nTSecurityDescriptor: blah
+whenCreated: 20160519184607.0Z
+whenChanged: 20160519184607.0Z
+uSNCreated: 3372
+name: Users
+objectGUID:: W9EzWJS2tUeXl8tZqz/g0w==
+objectCategory: CN=Container,CN=Schema,CN=Configuration,DC=ad,DC=example,DC=com
+description: Default container for upgraded user accounts
+systemFlags: -1946157056
+isCriticalSystemObject: TRUE
+showInAdvancedViewOnly: FALSE
+uSNChanged: 3373
+distinguishedName: CN=Users,DC=ad,DC=example,DC=com

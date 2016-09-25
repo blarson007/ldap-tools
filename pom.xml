@@ -19,5 +19,8 @@
 		<module>ldap-server</module>
 		<module>ldap-server-apache</module>
 		<module>ldap-server-unboundid</module>
+		<module>ldap-sync</module>
+		<module>ldap-examples</module>
+		<module>ldap-servlet-apache</module>
 	</modules>
 </project>

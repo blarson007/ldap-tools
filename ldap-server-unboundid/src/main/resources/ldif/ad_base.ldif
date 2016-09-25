@@ -1,0 +1,53 @@
+dn: DC=ad,DC=example,DC=com
+objectClass: top
+objectClass: domain
+objectClass: domainDNS
+instanceType: 5
+whenCreated: 20160519184558.0Z
+uSNCreated: 8
+name: ad
+objectGUID:: gVe6YbNCZUWSaBpeTaBU5A==
+nTSecurityDescriptor: blah
+objectCategory: CN=Domain-DNS,CN=Schema,CN=Configuration,DC=ad,DC=example,DC=com
+dc: ad
+auditingPolicy:: AAE=
+creationTime: 131081571580000000
+gPLink: [LDAP://CN={31B2F340-016D-11D2-945F-00C04FB984F9},CN=Policies,CN=System,DC=ad,DC=example,DC=com;0]
+isCriticalSystemObject: TRUE
+lockoutDuration: -18000000000
+lockOutObservationWindow: -18000000000
+lockoutThreshold: 0
+maxPwdAge: -36288000000000
+minPwdAge: -864000000000
+minPwdLength: 7
+modifiedCountAtLastProm: 0
+msDS-AllUsersTrustQuota: 1000
+msDS-Behavior-Version: 4
+ms-DS-MachineAccountQuota: 10
+msDS-NcType: 0
+msDS-PerUserTrustQuota: 1
+msDS-PerUserTrustTombstonesQuota: 10
+nextRid: 1000
+nTMixedDomain: 0
+pwdProperties: 1
+pwdHistoryLength: 24
+systemFlags: -1946157056
+rIDManagerReference: CN=RID Manager$,CN=System,DC=ad,DC=example,DC=com
+wellKnownObjects: B:32:6227F0AF1FC2410D8E3BB10615BB5B0F:CN=NTDS Quotas,DC=ad,DC=example,DC=com
+wellKnownObjects: B:32:F4BE92A4C777485E878E9421D53087DB:CN=Microsoft,CN=Program Data,DC=ad,DC=example,DC=com
+wellKnownObjects: B:32:09460C08AE1E4A4EA0F64AEE7DAA1E5A:CN=Program Data,DC=ad,DC=example,DC=com
+wellKnownObjects: B:32:22B70C67D56E4EFB91E9300FCA3DC1AA:CN=ForeignSecurityPrincipals,DC=ad,DC=example,DC=com
+wellKnownObjects: B:32:18E2EA80684F11D2B9AA00C04F79F805:CN=Deleted Objects,DC=ad,DC=example,DC=com
+wellKnownObjects: B:32:2FBAC1870ADE11D297C400C04FD8D5CD:CN=Infrastructure,DC=ad,DC=example,DC=com
+wellKnownObjects: B:32:AB8153B7768811D1ADED00C04FD8D5CD:CN=LostAndFound,DC=ad,DC=example,DC=com
+wellKnownObjects: B:32:AB1D30F3768811D1ADED00C04FD8D5CD:CN=System,DC=ad,DC=example,DC=com
+wellKnownObjects: B:32:A361B2FFFFD211D1AA4B00C04FD7D83A:OU=Domain Controllers,DC=ad,DC=example,DC=com
+wellKnownObjects: B:32:AA312825768811D1ADED00C04FD8D5CD:CN=Computers,DC=ad,DC=example,DC=com
+wellKnownObjects: B:32:A9D1CA15768811D1ADED00C04FD8D5CD:CN=Users,DC=ad,DC=example,DC=com
+fSMORoleOwner: CN=NTDS Settings,CN=F813A028846A,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=ad,DC=example,DC=com
+whenChanged: 20160519184608.0Z
+uSNChanged: 3596
+msDs-masteredBy: CN=NTDS Settings,CN=F813A028846A,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=ad,DC=example,DC=com
+msDS-IsDomainFor: CN=NTDS Settings,CN=F813A028846A,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=ad,DC=example,DC=com
+masteredBy: CN=NTDS Settings,CN=F813A028846A,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=ad,DC=example,DC=com
+distinguishedName: DC=ad,DC=example,DC=com

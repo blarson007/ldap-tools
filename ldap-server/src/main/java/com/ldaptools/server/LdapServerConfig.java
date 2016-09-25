@@ -4,10 +4,10 @@ public class LdapServerConfig {
 
 	private String host = "localhost";
 	private int port = 389;
-	private String user = "CN=Administrator,CN=Users,DC=example,DC=com";
+	private String user = "CN=Administrator,CN=Users,DC=ad,DC=example,DC=com";
 	private String password = "p@ssw0rd";
 	private String baseDN = "DC=ad,DC=example,DC=com";
-	private String userSearchBase = "CN=Users,DC=example,DC=com";
+	private String userSearchBase = "CN=Users,DC=ad,DC=example,DC=com";
 	
 	private int numUsers = 100;
 	private int numGroups = 5;
